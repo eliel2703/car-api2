@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car-api2 - Gestão de Veículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 car-api2</h1>
+            <p>Sistema de gestão de veículos</p>
+        </header>
+        
+        <div class="form-section">
+            <h2 id="form-title">Cadastrar Novo Carro</h2>
+            <form id="carro-form">
+                <input type="hidden" id="carro-id">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="marca">Marca *</label>
+                        <input type="text" id="marca" required placeholder="Ex: Toyota, Volkswagen">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="modelo">Modelo *</label>
+                        <input type="text" id="modelo" required placeholder="Ex: Corolla, Gol">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ano">Ano *</label>
+                        <input type="number" id="ano" required min="1886" max="2030" placeholder="Ex: 2023">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="placa">Placa *</label>
+                        <input type="text" id="placa" required placeholder="Ex: ABC1234">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cor">Cor *</label>
+                        <input type="text" id="cor" required placeholder="Ex: Preto, Branco">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="btn-salvar" class="btn-primary">
+                        <span id="btn-text">Cadastrar Carro</span>
+                    </button>
+                    <button type="button" id="btn-cancelar" class="btn-secondary">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="list-section">
+            <div class="section-header">
+                <h2>Frota de Veículos</h2>
+                <span id="total-carros">0 carros</span>
+            </div>
+            
+            <div id="loading" class="loading">Carregando...</div>
+            <div id="lista-carros" class="cars-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
