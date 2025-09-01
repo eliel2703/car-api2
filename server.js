@@ -23,6 +23,6 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`🚗 car-api2 rodando na porta ${PORT}`);
-    console.log(`📊 Acesse: http://localhost:${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`http://localhost:${PORT}`);
 });

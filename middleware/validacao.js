@@ -16,7 +16,7 @@ const validarCarro = (req, res, next) => {
         });
     }
     
-    // Validar placa (formato simples)
+    // Validr placa
     if (placa.length < 6 || placa.length > 8) {
         return res.status(400).json({ 
             error: 'Placa deve ter entre 6 e 8 caracteres' 

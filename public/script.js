@@ -41,7 +41,7 @@ class CarAPI2 {
         if (carros.length === 0) {
             container.innerHTML = `
                 <div class="empty-state">
-                    <h3>🚗 Nenhum carro cadastrado</h3>
+                    <h3>Nenhum carro cadastrado</h3>
                     <p>Comece cadastrando o primeiro veículo!</p>
                 </div>
             `;
@@ -59,10 +59,10 @@ class CarAPI2 {
                 </div>
                 <div class="car-actions">
                     <button class="btn-edit" onclick="carApi2.editarCarro(${carro.id})">
-                        ✏️ Editar
+                        Editar
                     </button>
                     <button class="btn-delete" onclick="carApi2.excluirCarro(${carro.id})">
-                        🗑️ Excluir
+                        Excluir
                     </button>
                 </div>
             </div>
@@ -127,7 +127,6 @@ class CarAPI2 {
                 
                 this.editandoId = id;
                 
-                // Scroll para o formulário
                 document.querySelector('.form-section').scrollIntoView({ 
                     behavior: 'smooth' 
                 });
@@ -184,13 +183,12 @@ class CarAPI2 {
     }
 
     mostrarMensagem(mensagem) {
-        alert(`✅ ${mensagem}`);
+        alert(`${mensagem}`);
     }
 
     mostrarErro(mensagem) {
-        alert(`❌ ${mensagem}`);
+        alert(`${mensagem}`);
     }
 }
 
-// Inicializar a aplicação
 const carApi2 = new CarAPI2();
