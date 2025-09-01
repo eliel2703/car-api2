@@ -17,11 +17,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Health check
-app.get('/health', (req, res) => {
-    res.json({ status: 'OK', projeto: 'car-api2', timestamp: new Date().toISOString() });
-});
-
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
     console.log(`http://localhost:${PORT}`);

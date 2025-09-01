@@ -6,7 +6,6 @@ const { validarCarro } = require('../middleware/validacao');
 const router = express.Router();
 const dadosPath = path.join(__dirname, '../dados/carros.json');
 
-// Helper para ler carros
 const lerCarros = () => {
     try {
         if (!fs.existsSync(dadosPath)) {
@@ -20,7 +19,6 @@ const lerCarros = () => {
     }
 };
 
-// Helper para salvar carros
 const salvarCarros = (carros) => {
     try {
         fs.writeFileSync(dadosPath, JSON.stringify(carros, null, 2));
